@@ -1,0 +1,27 @@
+#:include kv/homescreen.kv
+#:include kv/plumbingscreen.kv
+#:include kv/orderscreen.kv
+#:include kv/categoryscreen.kv 
+#:include kv/mustreadscreen.kv 
+#:include kv/subplumbingscreen.kv 
+    
+GridLayout:
+    cols:1
+    ScreenManager:
+        id: screen_manager
+        HomeScreen:
+            name:"home_screen"
+            id: home_screen
+        
+        PlumbingScreen:
+            name: "plumbing_screen"
+            id: plumbing_screen
+        OrderScreen:
+            name: "order_screen"
+            id: order_screen
+        CategoryScreen:
+            name: "category_screen"
+            id: category_screen    
+        MustreadScreen:
+            name: "mustread_screen"
+            id: mustread_screen 

@@ -1,0 +1,176 @@
+#:import rgba kivy.utils.rgba
+
+<CategoryScreen>:
+    canvas:
+        Color:
+            rgba: rgba('#35477d')   
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        canvas:
+            Color:
+                rgba: rgba('#ffffff') 
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            # Grid 1 
+            canvas:
+                Color: 
+                    rgba: rgba('#35477d')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos  
+            rows: 1
+            pos_hint: {"top": 1,"left": 1 }
+            size_hint: 1, 0.08 
+            Label: 
+                markup: True
+                text: "[b]All Categories[/b]"
+                color: 1, 1, 1, 1  
+                
+
+        GridLayout:
+            # Grid 2 
+            canvas:
+                Color: 
+                    rgba: rgba('#C0C0C0')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos  
+            rows: 1
+            
+            spacing: 10
+            pos_hint: {"top": .92,"left": 1 }
+            size_hint: .45, 0.08  
+            Label: 
+                text: 'Recent Launches'
+                color: .92,0.43,.38,1
+                bold: True
+                
+        GridLayout:
+            # Grid 2 
+            canvas:
+                Color: 
+                    rgba: rgba('#F0F0F0')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos  
+            rows: 1
+            
+            spacing: 10
+            pos_hint: {"top": .84,"left": 1 }
+            size_hint: .45, 0.08  
+            Label: 
+                text: 'Salon At Home'
+                color: .92,0.43,.38,1
+                bold: True
+
+        GridLayout:
+            # Grid 2 
+            canvas:
+                Color: 
+                    rgba: rgba('#C0C0C0')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos  
+            rows: 1
+            
+
+            pos_hint: {"top": .76,"left": 1 }
+            size_hint: .45, 0.08  
+            Label: 
+                text: 'Interior Design'
+                color: .92,0.43,.38,1
+                bold: True              
+            
+        GridLayout:
+            # Grid 2 
+            canvas:
+                Color: 
+                    rgba: rgba('#F0F0F0')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos  
+            rows: 1
+            
+
+            pos_hint: {"top": .68,"left": 1 }
+            size_hint: .45, 0.08  
+            Label: 
+                text: 'Renovation'
+                color: .92,0.43,.38,1
+                bold: True        
+        
+        GridLayout:
+            # Grid 2 
+            canvas:
+                Color: 
+                    rgba: rgba('#C0C0C0')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos  
+            rows: 1
+            
+
+            pos_hint: {"top": .60,"left": 1 }
+            size_hint: .45, 0.08  
+            Label: 
+                text: 'Home Cleaning'
+                color: .92,0.43,.38,1
+                bold: True 
+
+    
+
+        GridLayout:
+            # grid 4   
+            canvas:
+                Color: 
+                    rgba: rgba('#ffffff')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos 
+            #Add 5 Menu Buttons over here
+            rows: 1
+            pos_hint: {"top": .09, "left": 1}
+            size_hint: 1,.09
+            ImageButton:
+                source: "icons/small_icons/order01.png"
+                on_press:
+                    self.source ="icons/small_icons/order02.png"
+                on_release:
+                    self.source = "icons/small_icons/order01.png"
+                    app.change_screen("order_screen") 
+
+                    
+            ImageButton:
+                source: "icons/small_icons/category01.png"
+                on_press:
+                    self.source ="icons/small_icons/category02.png"
+                on_release:
+                    self.source = "icons/small_icons/category01.png"
+                    app.change_screen("category_screen")
+            ImageButton:
+                source: "icons/small_icons/home03.png"
+                on_press:
+                    self.source ="icons/small_icons/home02.png"
+                on_release:
+                    self.source = "icons/small_icons/home03.png"
+                    app.change_screen("home_screen")
+            ImageButton:
+                source: "icons/small_icons/must_read01.png"
+                on_press:
+                    self.source ="icons/small_icons/must_read02.png"
+                on_release:
+                    self.source = "icons/small_icons/must_read01.png"
+                    app.change_screen("mustread_screen")        
+            ImageButton:
+                source: "icons/small_icons/profile01.png"
+                on_press:
+                    self.source ="icons/small_icons/profile02.png"
+                on_release:
+                    self.source = "icons/small_icons/profile01.png"
+                    app.change_screen("plumbing_screen")                
+
+            
