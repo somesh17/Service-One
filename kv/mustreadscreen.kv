@@ -1,0 +1,134 @@
+#:import rgba kivy.utils.rgba
+
+<MustreadScreen>:
+    canvas:
+        Color:
+            rgba: rgba('#76D7C4')   
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        canvas:
+            Color:
+                rgba: rgba('#ffffff') 
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            # Grid 1 
+            canvas:
+                Color: 
+                    rgba: rgba('#35477d')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos  
+            rows: 1
+            pos_hint: {"top": 1,"left": 1 }
+            size_hint: 1, 0.08 
+            Label: 
+                markup: True
+                text: "[b]Must Reads[/b]"
+                color: 1, 1, 1, 1  
+
+        GridLayout:
+            # grid 2
+            canvas:
+                Color: 
+                    rgba: rgba('#ffffff')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos  
+            # Put two weather icons here and avatar icon
+            rows: 1
+            pos_hint: {"top": .92,"left": 1}
+            size_hint: 1, .24
+            Image:	
+                source: "icons/banner1.jpg"
+                size_hint: self.size
+        GridLayout:
+            # grid 3
+            canvas:
+                Color: 
+                    rgba: rgba('#ffffff')  
+                Rectangle:
+
+                    size: self.size
+                    pos: self.pos  
+            # Put two weather icons here and avatar icon
+            rows: 1
+            pos_hint: {"top": .68,"left": 1}
+            size_hint: 1, .24
+            
+            Image:	
+                source: "icons/banner4.jpg"
+                size_hint: 15, 5
+        GridLayout:
+            # grid 3
+            canvas:
+                Color: 
+                    rgba: rgba('#ffffff')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos  
+            # Put two weather icons here and avatar icon
+            rows: 1
+            pos_hint: {"top": .44,"left": 1}
+            size_hint: 1, .24
+            Image:	
+                source: "icons/banner3.jpg"
+                size_hint: self.size
+
+
+
+        GridLayout:
+            # grid 4   
+            canvas:
+                Color: 
+                    rgba: rgba('#ffffff')  
+                Rectangle:
+                    size: self.size
+                    pos: self.pos 
+            #Add 5 Menu Buttons over here
+            rows: 1
+            pos_hint: {"top": .09, "left": 1}
+            size_hint: 1,.09
+            ImageButton:
+                source: "icons/small_icons/order01.png"
+                on_press:
+                    self.source ="icons/small_icons/order02.png"
+                on_release:
+                    self.source = "icons/small_icons/order01.png"
+                    app.change_screen("order_screen") 
+
+                    
+            ImageButton:
+                source: "icons/small_icons/category01.png"
+                on_press:
+                    self.source ="icons/small_icons/category02.png"
+                on_release:
+                    self.source = "icons/small_icons/category01.png"
+                    app.change_screen("category_screen")
+            ImageButton:
+                source: "icons/small_icons/home03.png"
+                on_press:
+                    self.source ="icons/small_icons/home02.png"
+                on_release:
+                    self.source = "icons/small_icons/home03.png"
+                    app.change_screen("home_screen")
+            ImageButton:
+                source: "icons/small_icons/must_read01.png"
+                on_press:
+                    self.source ="icons/small_icons/must_read02.png"
+                on_release:
+                    self.source = "icons/small_icons/must_read01.png"
+                    app.change_screen("mustread_screen")        
+            ImageButton:
+                source: "icons/small_icons/profile01.png"
+                on_press:
+                    self.source ="icons/small_icons/profile02.png"
+                on_release:
+                    self.source = "icons/small_icons/profile01.png"
+                    app.change_screen("plumbing_screen")                
+
+                        
+                

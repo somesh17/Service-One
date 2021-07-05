@@ -1,0 +1,38 @@
+#:import rgba kivy.utils.rgba
+
+<PlumbingScreen>:
+    canvas:
+        Color:
+            rgba: rgba('#76D7C4')   
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        canvas:                                      
+            Color:
+                rgba: rgba('#35477d') 
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            id: friend_id_label
+            font_size: 40
+            text: "Profile Page :"
+            size_hint: 1, .1
+            pos_hint: {"top": 1, "left": 1}
+        ImageButton:
+            size_hint: .5, .2
+            pos_hint: {"top": .85, "left": 1}
+            source: "icons/profile02.png"
+            on_release:
+                app.change_screen("home_screen")
+
+
+
+   
+
+
+
+
+
+
